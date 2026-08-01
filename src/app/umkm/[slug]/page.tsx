@@ -98,14 +98,14 @@ export default async function UmkmDetailPage({ params }: PageProps) {
         </div>
 
         {/* Cover Image Header */}
-        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden border-2 border-border bg-muted shadow-sm mb-8">
+        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden border-4 border-border bg-muted shadow-[8px_8px_0_0_#0F172A] mb-12 -rotate-1 transform-gpu hover:rotate-0 transition-transform duration-500">
           <Image
             src={umkm.cover_image_url || "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop"}
             alt={umkm.name}
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover hover:scale-105 transition-transform duration-700"
           />
         </div>
 
@@ -117,8 +117,8 @@ export default async function UmkmDetailPage({ params }: PageProps) {
                 {umkm.category}
               </span>
               {umkm.rw && (
-                <span className="bg-secondary text-secondary-foreground px-3.5 py-1 text-xs font-bold uppercase tracking-wider rounded-full border border-border">
-                  {umkm.rw} {umkm.rt ? `/ ${umkm.rt}` : ""}
+                <span className="bg-[#f2bf48] text-[#0e1743] px-4 py-1.5 text-xs font-bold uppercase tracking-wider rounded-full border-2 border-[#0e1743] shadow-[2px_2px_0_0_#0e1743]">
+                  RW {umkm.rw} {umkm.rt ? `/ RT ${umkm.rt}` : ""}
                 </span>
               )}
               {umkm.established_year && (
@@ -190,7 +190,7 @@ export default async function UmkmDetailPage({ params }: PageProps) {
 
           {/* Right Column (1/3 Width - Sticky Contact Card) */}
           <div className="lg:col-span-1">
-            <div className="bg-card border-2 border-border rounded-2xl p-6 md:p-8 sticky top-28 space-y-6 shadow-sm">
+            <div className="bg-card border-4 border-border rounded-2xl p-6 md:p-8 sticky top-28 space-y-6 shadow-[8px_8px_0_0_#0F172A] transition-all duration-300 hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0F172A]">
               <h2 className="font-heading uppercase font-bold text-xl border-b-2 border-border pb-3">
                 Hubungi Penjual
               </h2>
@@ -204,7 +204,7 @@ export default async function UmkmDetailPage({ params }: PageProps) {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground active:scale-95 font-bold px-6 py-4 rounded-full w-full flex items-center justify-center gap-3 text-lg uppercase transition-all shadow-md border-2 border-border"
+                className="bg-[#25D366] text-[#0e1743] hover:bg-[#128C7E] hover:text-white font-bold px-6 py-4 rounded-full w-full flex items-center justify-center gap-3 text-lg uppercase transition-all shadow-[4px_4px_0_0_#0F172A] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] border-2 border-[#0e1743]"
               >
                 <WhatsappIcon className="w-6 h-6" /> Chat WhatsApp
               </a>

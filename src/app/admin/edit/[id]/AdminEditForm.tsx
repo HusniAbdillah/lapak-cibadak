@@ -25,8 +25,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const CATEGORIES = ["Kuliner", "Kerajinan", "Perdagangan", "Jasa", "Lainnya"];
-const RWS = ["RW 01", "RW 02", "RW 03", "RW 04", "RW 05"];
-const RTS = ["RT 01", "RT 02", "RT 03", "RT 04", "RT 05"];
+
 
 interface Props {
   initialData: any;
@@ -156,29 +155,23 @@ export function AdminEditForm({ initialData }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1.5">
             <label className="font-bold text-xs uppercase text-foreground/80">Wilayah RW *</label>
-            <select
+            <input
+              type="text"
+              placeholder="Contoh: 01A"
               {...register("rw")}
-              className={`w-full bg-background border-2 ${errors.rw ? "border-red-500" : "border-border"} p-3 rounded-xl font-sans text-sm focus:outline-none focus:border-primary appearance-none`}
-            >
-              <option value="">Pilih RW...</option>
-              {RWS.map((rw) => (
-                <option key={rw} value={rw}>{rw}</option>
-              ))}
-            </select>
+              className={`w-full bg-background border-2 ${errors.rw ? "border-red-500" : "border-border"} p-3 rounded-xl font-sans text-sm focus:outline-none focus:border-primary`}
+            />
             {errors.rw && <p className="text-red-500 text-xs font-bold uppercase">{errors.rw.message}</p>}
           </div>
 
           <div className="space-y-1.5">
             <label className="font-bold text-xs uppercase text-foreground/80">Wilayah RT *</label>
-            <select
+            <input
+              type="text"
+              placeholder="Contoh: 01B"
               {...register("rt")}
-              className={`w-full bg-background border-2 ${errors.rt ? "border-red-500" : "border-border"} p-3 rounded-xl font-sans text-sm focus:outline-none focus:border-primary appearance-none`}
-            >
-              <option value="">Pilih RT...</option>
-              {RTS.map((rt) => (
-                <option key={rt} value={rt}>{rt}</option>
-              ))}
-            </select>
+              className={`w-full bg-background border-2 ${errors.rt ? "border-red-500" : "border-border"} p-3 rounded-xl font-sans text-sm focus:outline-none focus:border-primary`}
+            />
             {errors.rt && <p className="text-red-500 text-xs font-bold uppercase">{errors.rt.message}</p>}
           </div>
         </div>

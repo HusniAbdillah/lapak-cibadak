@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { SecurityCheckIcon, Store01Icon, Logout01Icon, ListCheckIcon } from "hugeicons-react";
+import { SecurityCheckIcon, Store01Icon, Logout01Icon, CheckListIcon } from "hugeicons-react";
 import { createClient } from "@/utils/supabase/client";
 
 export default function AdminLayout({
@@ -25,7 +25,7 @@ export default function AdminLayout({
       label: "Antrean Moderasi",
       href: "/admin",
       exact: true,
-      icon: ListCheckIcon,
+      icon: CheckListIcon,
     },
     {
       label: "Kelola Lapak Aktif",

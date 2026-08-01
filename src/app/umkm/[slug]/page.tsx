@@ -210,21 +210,21 @@ export default async function UmkmDetailPage({ params }: PageProps) {
               </a>
 
               {/* Social Media Links if any */}
-              {umkm.social_media && Object.keys(umkm.social_media).length > 0 && (
+              {umkm.social_media && typeof umkm.social_media === "object" && Object.keys(umkm.social_media).length > 0 && (
                 <div className="pt-4 border-t-2 border-border space-y-3">
                   <h3 className="font-heading uppercase font-bold text-xs text-foreground/70">
                     Media Sosial & Tautan
                   </h3>
                   <div className="flex flex-col gap-2">
-                    {Object.entries(umkm.social_media).map(([platform, link]) => (
+                    {Object.entries(umkm.social_media as Record<string, string>).map(([platform, link]) => (
                       <a
                         key={platform}
-                        href={link}
+                        href={String(link)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-sm font-bold text-foreground hover:text-secondary uppercase transition-colors"
                       >
-                        <GlobeIcon className="w-4 h-4" /> {platform}: {link}
+                        <GlobeIcon className="w-4 h-4" /> {platform}: {String(link)}
                       </a>
                     ))}
                   </div>

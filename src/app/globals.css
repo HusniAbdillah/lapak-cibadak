@@ -17,15 +17,15 @@
   --font-sans: var(--font-figtree);
   --font-heading: var(--font-space-grotesk);
 
-  /* Force 0px radius for Brutalism */
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-2xl: 0px;
-  --radius-3xl: 0px;
-  --radius-4xl: 0px;
-  --radius: 0px;
+  /* Friendly Neo-Brutalism rounded corners */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius: 0.75rem;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -86,7 +86,7 @@
     --input: #0e1743; /* Navy */
     --ring: #0e1743; /* Navy */
     
-    --radius: 0px; /* Brutalism */
+    --radius: 0.75rem; /* Friendly Neo-Brutalism (12px) */
     
     --sidebar: #fff8f0; /* Ivory */
     --sidebar-foreground: #0e1743; /* Navy */
@@ -99,7 +99,7 @@
   }
 
   .dark {
-    /* Inverted palette for dark mode (Navy background, Ivory text) */
+    /* Inverted palette for dark mode */
     --background: #0e1743;
     --foreground: #fff8f0;
     

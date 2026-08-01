@@ -15,7 +15,7 @@ export default function Home() {
       id: 2,
       name: "Kerajinan Bambu Ibu Siti",
       category: "Kerajinan",
-      image: "https://images.unsplash.com/photo-1516947230219-58b3f1146603?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
     },
     {
       id: 3,
@@ -30,19 +30,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center px-4 md:px-6 py-20 bg-background border-b-2 border-border text-center">
         <div className="max-w-5xl flex flex-col items-center gap-8">
-          <h1 className="font-heading uppercase font-bold tracking-tighter text-7xl md:text-8xl lg:text-9xl leading-none text-foreground">
+          <h1 className="font-heading uppercase font-bold tracking-tighter text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none text-foreground">
             Karya Lokal,
             <br />
             Cerita Cibadak.
           </h1>
-          <p className="font-sans text-xl md:text-2xl max-w-2xl text-foreground/80 mt-4">
+          <p className="font-sans text-xl md:text-2xl max-w-2xl text-foreground/80 mt-4 leading-relaxed">
             Temukan dan dukung berbagai usaha mikro kecil dan menengah (UMKM) unggulan langsung dari Desa Cibadak.
           </p>
           <Link
-            href="/direktori"
-            className="mt-8 flex items-center gap-2 bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground border-2 border-border px-8 py-4 font-bold text-lg md:text-xl rounded-none transition-colors group uppercase"
+            href="/jelajah"
+            className="mt-8 flex items-center gap-3 bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground active:scale-95 border-2 border-border px-9 py-4 font-bold text-lg md:text-xl rounded-full transition-all group uppercase shadow-md hover:-translate-y-0.5"
           >
-            Eksplor Direktori
+            Jelajah Lapak
             <ArrowRight01Icon className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -68,19 +68,20 @@ export default function Home() {
             <h2 className="font-heading uppercase font-bold tracking-tighter text-4xl md:text-6xl text-foreground">
               UMKM Pilihan
             </h2>
-            <Link href="/direktori" className="hidden md:flex font-bold hover:text-secondary transition-colors uppercase border-b-2 border-transparent hover:border-secondary pb-1">
+            <Link href="/jelajah" className="hidden md:flex font-bold hover:text-secondary transition-colors uppercase border-b-2 border-transparent hover:border-secondary pb-1 active:scale-95">
               Lihat Semua
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredUmkm.map((umkm) => (
-              <div key={umkm.id} className="group flex flex-col bg-card border-2 border-border hover:-translate-y-2 transition-transform duration-300 rounded-none">
+              <div key={umkm.id} className="group flex flex-col bg-card border-2 border-border hover:-translate-y-1 hover:shadow-md active:scale-[0.98] transition-all duration-300 rounded-2xl overflow-hidden shadow-sm">
                 <div className="relative aspect-[3/4] w-full border-b-2 border-border overflow-hidden bg-muted">
                   <Image
                     src={umkm.image}
                     alt={umkm.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -91,14 +92,14 @@ export default function Home() {
                     </h3>
                   </div>
                   <div className="flex">
-                    <span className="bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-none border border-border">
+                    <span className="bg-primary text-primary-foreground px-3.5 py-1 text-xs font-bold uppercase tracking-wider rounded-full border border-border">
                       {umkm.category}
                     </span>
                   </div>
                   <div className="mt-auto pt-6">
                     <Link
-                      href={`/direktori/${umkm.id}`}
-                      className="block w-full text-center bg-transparent text-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground font-bold px-4 py-3 transition-colors rounded-none uppercase"
+                      href={`/jelajah`}
+                      className="block w-full text-center bg-transparent text-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground active:scale-95 font-bold px-4 py-3 transition-all rounded-full uppercase"
                     >
                       Lihat Profil
                     </Link>
@@ -109,8 +110,8 @@ export default function Home() {
           </div>
           
           <div className="mt-12 flex justify-center md:hidden">
-            <Link href="/direktori" className="w-full text-center bg-primary text-primary-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground font-bold px-6 py-4 transition-colors rounded-none uppercase">
-              Lihat Semua UMKM
+            <Link href="/jelajah" className="w-full text-center bg-primary text-primary-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground active:scale-95 font-bold px-6 py-4 transition-all rounded-full uppercase">
+              Jelajah Semua Lapak
             </Link>
           </div>
         </div>
@@ -118,3 +119,4 @@ export default function Home() {
     </div>
   );
 }
+

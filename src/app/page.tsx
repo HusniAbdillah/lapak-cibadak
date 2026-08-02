@@ -2,28 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight01Icon } from "hugeicons-react";
 
-export default function Home() {
-  // Dummy data for featured UMKM
-  const featuredUmkm = [
-    {
-      id: 1,
-      name: "Warung Kopi Abah",
-      category: "Kuliner",
-      image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 2,
-      name: "Kerajinan Bambu Ibu Siti",
-      category: "Kerajinan",
-      image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      name: "Toko Sembako Makmur",
-      category: "Perdagangan",
-      image: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=800&auto=format&fit=crop",
-    },
-  ];
+import { createClient } from "@/utils/supabase/server";
+
+export const revalidate = 60;
+
+export default async function Home() {
+  const supabase = await createClient();
+
+  // Fetch 3 latest active UMKM
+  const { data: latestUmkm } = await supabase
+    .from("umkm")
+    .select("id, name, slug, category, cover_image_url")
+    .eq("is_active", true)
+    .order("created_at", { ascending: false })
+    .limit(3);
+
+  const featuredUmkm = latestUmkm || [];
 
   return (
     <div className="flex flex-col w-full">
@@ -78,7 +72,7 @@ export default function Home() {
               <div key={umkm.id} className="group flex flex-col bg-card border-2 border-border hover:-translate-y-1 hover:shadow-md active:scale-[0.98] transition-all duration-300 rounded-2xl overflow-hidden shadow-sm">
                 <div className="relative aspect-[3/4] w-full border-b-2 border-border overflow-hidden bg-muted">
                   <Image
-                    src={umkm.image}
+                    src={umkm.cover_image_url || "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop"}
                     alt={umkm.name}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
@@ -98,7 +92,7 @@ export default function Home() {
                   </div>
                   <div className="mt-auto pt-6">
                     <Link
-                      href={`/jelajah`}
+                      href={`/umkm/${umkm.slug}`}
                       className="block w-full text-center bg-transparent text-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground active:scale-95 font-bold px-4 py-3 transition-all rounded-full uppercase"
                     >
                       Lihat Profil

@@ -6,41 +6,7 @@ import Link from "next/link";
 import { Search01Icon, Location01Icon, FilterIcon, Store01Icon } from "hugeicons-react";
 import type { Umkm } from "./page";
 
-const FALLBACK_DUMMY: Umkm[] = [
-  {
-    id: "1",
-    name: "Warung Kopi Abah",
-    slug: "warung-kopi-abah",
-    category: "Kuliner",
-    rw: "RW 01",
-    rt: "RT 02",
-    address: "Jl. Raya Cibadak No. 12",
-    cover_image_url: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop",
-    owner_name: "Abah",
-  },
-  {
-    id: "2",
-    name: "Kerajinan Bambu Ibu Siti",
-    slug: "kerajinan-bambu-ibu-siti",
-    category: "Kerajinan",
-    rw: "RW 02",
-    rt: "RT 04",
-    address: "Gang Melati RW 02",
-    cover_image_url: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
-    owner_name: "Ibu Siti",
-  },
-  {
-    id: "3",
-    name: "Toko Sembako Makmur",
-    slug: "toko-sembako-makmur",
-    category: "Perdagangan",
-    rw: "RW 03",
-    rt: "RT 01",
-    address: "Jl. Pasar Desa Cibadak",
-    cover_image_url: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=800&auto=format&fit=crop",
-    owner_name: "Pak Makmur",
-  },
-];
+
 
 const CATEGORIES = ["Semua", "Kuliner", "Kerajinan", "Perdagangan", "Jasa"];
 const LOCATIONS = ["Semua", "RW 01", "RW 02", "RW 03", "RW 04", "RW 05"];
@@ -50,7 +16,7 @@ interface Props {
 }
 
 export function JelajahContent({ initialUmkm }: Props) {
-  const umkmData = initialUmkm.length > 0 ? initialUmkm : FALLBACK_DUMMY;
+  const umkmData = initialUmkm;
   const [selectedCategory, setSelectedCategory] = useState("Semua");
   const [selectedLocation, setSelectedLocation] = useState("Semua");
   const [searchQuery, setSearchQuery] = useState("");

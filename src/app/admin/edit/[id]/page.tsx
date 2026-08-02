@@ -4,6 +4,8 @@ import { AdminEditForm } from "./AdminEditForm";
 import Link from "next/link";
 import { ArrowLeft01Icon } from "hugeicons-react";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: Promise<{
     id: string;
@@ -13,7 +15,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   return {
-    title: `Edit UMKM (${id.slice(0, 8)}) - Admin Lapak Cibadak`,
+    title: `Edit UMKM (${id.slice(0, 8)}) - Admin Cibadak Store`,
   };
 }
 

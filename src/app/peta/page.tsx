@@ -3,7 +3,7 @@ import { MapWrapper } from "@/components/map/MapWrapper";
 import { Location01Icon } from "hugeicons-react";
 
 export const metadata = {
-  title: "Peta Desa - Lapak Cibadak",
+  title: "Peta Desa - Cibadak Store",
   description: "Jelajahi lokasi UMKM Desa Cibadak melalui peta interaktif.",
 };
 

@@ -50,7 +50,7 @@ export default function AdminLayout({
                   Ruang Kendali Admin
                 </h1>
                 <p className="font-sans text-xs uppercase font-bold text-foreground/60 tracking-wider">
-                  Panel Manajemen Lapak Cibadak
+                  Panel Manajemen Cibadak Store
                 </p>
               </div>
             </div>

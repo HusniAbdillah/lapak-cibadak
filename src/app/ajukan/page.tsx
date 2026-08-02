@@ -2,8 +2,8 @@ import { AjukanForm } from "./AjukanForm";
 import { Store01Icon } from "hugeicons-react";
 
 export const metadata = {
-  title: "Ajukan UMKM - Lapak Cibadak",
-  description: "Daftarkan usaha Anda di Lapak Cibadak untuk mendapatkan lebih banyak pelanggan.",
+  title: "Ajukan UMKM - Cibadak Store",
+  description: "Daftarkan usaha Anda di Cibadak Store untuk mendapatkan lebih banyak pelanggan.",
 };
 
 export default function AjukanPage() {
@@ -19,7 +19,7 @@ export default function AjukanPage() {
             Daftarkan Usaha Anda
           </h1>
           <p className="font-sans text-base md:text-lg text-foreground/80 max-w-xl">
-            Mari berkembang bersama. Isi formulir di bawah ini untuk mendaftarkan UMKM Anda ke dalam direktori Lapak Cibadak.
+            Mari berkembang bersama. Isi formulir di bawah ini untuk mendaftarkan UMKM Anda ke dalam direktori Cibadak Store.
           </p>
         </div>
 

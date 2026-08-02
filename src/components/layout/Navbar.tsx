@@ -11,7 +11,7 @@ export function Navbar() {
 
   const links = [
     { name: "Beranda", href: "/" },
-    { name: "Jelajah Lapak", href: "/jelajah" },
+    { name: "Jelajah UMKM", href: "/jelajah" },
     { name: "Peta", href: "/peta" },
     { name: "Cerita", href: "/cerita" },
   ];
@@ -24,14 +24,14 @@ export function Navbar() {
           <div className="relative w-10 h-10 border-2 border-border rounded-xl overflow-hidden bg-white group-hover:scale-105 transition-transform">
             <Image
               src="/logo.webp"
-              alt="Lapak Cibadak Logo"
+              alt="Cibadak Store Logo"
               fill
               sizes="40px"
               className="object-contain p-1"
             />
           </div>
           <span className="font-heading uppercase font-bold tracking-tighter text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors">
-            LAPAK CIBADAK
+            CIBADAK STORE
           </span>
         </Link>
 

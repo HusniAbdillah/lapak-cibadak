@@ -18,7 +18,7 @@ export function Footer() {
             Ajukan UMKM &rarr;
           </Link>
           <Link href="/jelajah" className="font-heading uppercase font-bold text-2xl hover:text-secondary active:scale-95 transition-all">
-            Jelajah Lapak &rarr;
+            Jelajah UMKM &rarr;
           </Link>
           <p className="font-sans mt-8 opacity-75">
             &copy; {new Date().getFullYear()} Desa Cibadak. All rights reserved.

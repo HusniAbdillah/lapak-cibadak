@@ -2,7 +2,7 @@ import { createClient } from "@/utils/supabase/server";
 import { KelolaClient } from "./KelolaClient";
 
 export const metadata = {
-  title: "Kelola Lapak Aktif - Admin Lapak Cibadak",
+  title: "Kelola Lapak Aktif - Admin Cibadak Store",
 };
 
 export const dynamic = "force-dynamic";

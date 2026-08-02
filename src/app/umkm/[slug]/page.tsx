@@ -45,12 +45,12 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (!umkm) {
     return {
-      title: "UMKM Tidak Ditemukan - Lapak Cibadak",
+      title: "UMKM Tidak Ditemukan - Cibadak Store",
     };
   }
 
   return {
-    title: `${umkm.name} - Lapak Cibadak`,
+    title: `${umkm.name} - Cibadak Store`,
     description: umkm.description || `Profil UMKM ${umkm.name} di Desa Cibadak.`,
   };
 }
@@ -81,7 +81,7 @@ export default async function UmkmDetailPage({ params }: PageProps) {
 
   // Format WhatsApp Link
   const sanitizedPhone = sanitizeWhatsApp(umkm.whatsapp_number);
-  const waMessage = `Halo ${umkm.owner_name} (${umkm.name}), saya melihat profil usaha Anda di Lapak Cibadak dan ingin bertanya lebih lanjut...`;
+  const waMessage = `Halo ${umkm.owner_name} (${umkm.name}), saya melihat profil usaha Anda di Cibadak Store dan ingin bertanya lebih lanjut...`;
   const waUrl = `https://wa.me/${sanitizedPhone}?text=${encodeURIComponent(waMessage)}`;
 
   return (
@@ -93,7 +93,7 @@ export default async function UmkmDetailPage({ params }: PageProps) {
             href="/jelajah"
             className="inline-flex items-center gap-2 font-bold text-sm uppercase text-foreground hover:text-secondary active:scale-95 transition-all"
           >
-            <ArrowLeft01Icon className="w-5 h-5" /> Kembali ke Jelajah Lapak
+            <ArrowLeft01Icon className="w-5 h-5" /> Kembali ke Jelajah UMKM
           </Link>
         </div>
 

@@ -16,8 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Lapak Cibadak",
-  description: "Digital directory and storytelling platform for local micro-businesses (UMKM) in Indonesia",
+  title: {
+    default: "Cibadak Store | Direktori UMKM Desa Cibadak",
+    template: "%s | Cibadak Store",
+  },
+  description: "Platform direktori resmi UMKM Desa Cibadak. Temukan berbagai produk lokal, kuliner, dan jasa terbaik dari warga Cibadak.",
 };
 
 export default function RootLayout({

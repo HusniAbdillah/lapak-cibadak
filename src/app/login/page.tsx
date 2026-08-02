@@ -44,7 +44,7 @@ export default function LoginPage() {
             Login Admin
           </h1>
           <p className="font-sans text-xs text-foreground/70 uppercase font-bold tracking-wider">
-            Ruang Moderasi Lapak Cibadak
+            Ruang Moderasi Cibadak Store
           </p>
         </div>
 

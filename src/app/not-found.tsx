@@ -25,7 +25,7 @@ export default function NotFound() {
           href="/jelajah"
           className="w-full bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground active:scale-95 font-bold px-6 py-4 rounded-full border-2 border-border uppercase text-sm md:text-base transition-all flex items-center justify-center gap-2 shadow-md"
         >
-          <ArrowLeft01Icon className="w-5 h-5" /> Kembali ke Jelajah Lapak
+          <ArrowLeft01Icon className="w-5 h-5" /> Kembali ke Jelajah UMKM
         </Link>
       </div>
     </div>

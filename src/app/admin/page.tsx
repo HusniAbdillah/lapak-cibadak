@@ -2,7 +2,7 @@ import { createClient } from "@/utils/supabase/server";
 import { AdminDashboardClient } from "./AdminDashboardClient";
 
 export const metadata = {
-  title: "Antrean Moderasi - Admin Lapak Cibadak",
+  title: "Antrean Moderasi - Admin Cibadak Store",
 };
 
 export const dynamic = "force-dynamic";

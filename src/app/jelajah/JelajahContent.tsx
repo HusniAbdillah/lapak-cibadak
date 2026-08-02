@@ -73,7 +73,7 @@ export function JelajahContent({ initialUmkm }: Props) {
             Katalog Usaha Desa
           </span>
           <h1 className="font-heading uppercase font-bold tracking-tighter text-5xl md:text-7xl text-foreground">
-            Jelajah Lapak
+            Jelajah UMKM Desa
           </h1>
           <p className="font-sans text-lg md:text-xl text-foreground/80 max-w-2xl mt-2">
             Temukan dan dukung usaha lokal unggulan di Desa Cibadak berdasarkan kategori dan wilayah RW.

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Store01Icon, UserGroupIcon, SparklesIcon, ArrowRight01Icon } from "hugeicons-react";
 
 export const metadata = {
-  title: "Tentang Lapak Cibadak - Cerita & Inisiatif",
+  title: "Tentang Cibadak Store - Cerita & Inisiatif",
   description: "Mengenal lebih dekat platform digitalisasi UMKM Desa Cibadak.",
 };
 
@@ -35,7 +35,7 @@ export default function CeritaPage() {
             Inisiatif Digital Desa
           </span>
           <h1 className="font-heading uppercase font-bold tracking-tighter text-5xl md:text-7xl text-foreground">
-            Tentang Lapak Cibadak
+            Tentang Cibadak Store
           </h1>
           <p className="font-sans text-lg md:text-xl text-foreground/80 mt-4 leading-relaxed">
             Menghubungkan potensi usaha warga dengan pasar yang lebih luas melalui cerita dan teknologi.
@@ -50,7 +50,7 @@ export default function CeritaPage() {
             </h2>
             <div className="font-sans text-base md:text-lg text-foreground/90 leading-relaxed space-y-4">
               <p>
-                <strong>Lapak Cibadak</strong> lahir dari semangat gotong royong untuk mendorong kemandirian ekonomi masyarakat Desa Cibadak, Kecamatan Ciampea, Kabupaten Bogor. Banyak usaha mikro dan kecil warga yang memiliki produk berkualitas luar biasa, namun belum terdokumentasikan dengan rapi di ranah digital.
+                <strong>Cibadak Store</strong> lahir dari semangat gotong royong untuk mendorong kemandirian ekonomi masyarakat Desa Cibadak, Kecamatan Ciampea, Kabupaten Bogor. Banyak usaha mikro dan kecil warga yang memiliki produk berkualitas luar biasa, namun belum terdokumentasikan dengan rapi di ranah digital.
               </p>
               <p>
                 Platform ini tidak hanya sekadar direktori bisnis online, melainkan media penceritaan (digital storytelling) yang menguraikan kisah perjuangan, keunikan produk, serta lokasi fisik dari setiap pedagang dan perajin lokal di wilayah RW 01 hingga RW 05.

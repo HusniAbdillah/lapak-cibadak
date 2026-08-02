@@ -42,7 +42,7 @@ export default function Home() {
             href="/jelajah"
             className="mt-8 flex items-center gap-3 bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground active:scale-95 border-2 border-border px-9 py-4 font-bold text-lg md:text-xl rounded-full transition-all group uppercase shadow-md hover:-translate-y-0.5"
           >
-            Jelajah Lapak
+            Mulai Jelajah UMKM
             <ArrowRight01Icon className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -111,7 +111,7 @@ export default function Home() {
           
           <div className="mt-12 flex justify-center md:hidden">
             <Link href="/jelajah" className="w-full text-center bg-primary text-primary-foreground border-2 border-border hover:bg-secondary hover:text-secondary-foreground active:scale-95 font-bold px-6 py-4 transition-all rounded-full uppercase">
-              Jelajah Semua Lapak
+              Mulai Jelajah UMKM
             </Link>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function CeritaPage() {
                 <strong>Cibadak Store</strong> lahir dari semangat gotong royong untuk mendorong kemandirian ekonomi masyarakat Desa Cibadak, Kecamatan Ciampea, Kabupaten Bogor. Banyak usaha mikro dan kecil warga yang memiliki produk berkualitas luar biasa, namun belum terdokumentasikan dengan rapi di ranah digital.
               </p>
               <p>
-                Platform ini tidak hanya sekadar direktori bisnis online, melainkan media penceritaan (digital storytelling) yang menguraikan kisah perjuangan, keunikan produk, serta lokasi fisik dari setiap pedagang dan perajin lokal di wilayah RW 01 hingga RW 05.
+                Platform ini tidak hanya sekadar direktori bisnis online, melainkan media penceritaan (digital storytelling) yang menguraikan kisah perjuangan, keunikan produk, serta lokasi fisik dari setiap pedagang dan perajin lokal di wilayah RW 01 hingga RW 08.
               </p>
             </div>
           </div>

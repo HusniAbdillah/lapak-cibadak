@@ -9,7 +9,7 @@ import type { Umkm } from "./page";
 
 
 const CATEGORIES = ["Semua", "Kuliner", "Kerajinan", "Perdagangan", "Jasa"];
-const LOCATIONS = ["Semua", "RW 01", "RW 02", "RW 03", "RW 04", "RW 05"];
+const LOCATIONS = ["Semua", "RW 01", "RW 02", "RW 03", "RW 04", "RW 05", "RW 06", "RW 07", "RW 08"];
 
 interface Props {
   initialUmkm: Umkm[];
